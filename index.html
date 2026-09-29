@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>QUBI — KI-Assistent</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="qlogo">Q</div><span>QUBI</span></div>
+    <button id="newChat" class="new-chat">＋ Neuer Chat</button>
+    <nav>
+      <button class="nav active">◈ Aktueller Chat</button>
+      <button class="nav">▣ Projekte</button>
+      <button class="nav">⌘ Code</button>
+      <button class="nav">⚙ Einstellungen</button>
+    </nav>
+    <div class="side-bottom">QUBI AI · Gemini</div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div><strong>QUBI</strong><span class="sub"> KI-Assistent</span></div>
+      <button id="theme" class="icon-btn" aria-label="Design wechseln">☾</button>
+    </header>
+    <section id="chat" class="chat">
+      <div id="welcome" class="welcome">
+        <div class="hero-logo">Q</div>
+        <h1>Was möchtest du machen?</h1>
+        <p>Frage QUBI etwas, lerne, programmiere, plane Projekte oder arbeite mit Dateien.</p>
+        <div class="cards">
+          <button data-prompt="Erkläre mir ein Thema einfach und Schritt für Schritt.">Lernen</button>
+          <button data-prompt="Hilf mir, ein neues Projekt zu planen.">Projekt starten</button>
+          <button data-prompt="Erstelle mir eine moderne Website.">Code erstellen</button>
+          <button data-prompt="Erstelle ein modernes Bild- oder Designkonzept.">Bild & Design</button>
+          <button data-prompt="Analysiere diese Datei und erkläre mir die wichtigsten Punkte.">Datei analysieren</button>
+          <button data-prompt="Erstelle mir einen klaren Plan für mein Vorhaben.">Plan erstellen</button>
+        </div>
+      </div>
+    </section>
+    <div class="composer-wrap">
+      <form id="form" class="composer">
+        <input id="file" type="file" hidden multiple>
+        <button type="button" id="attach" class="tool" title="Datei hinzufügen">＋</button>
+        <textarea id="input" rows="1" placeholder="Schreibe etwas an QUBI …"></textarea>
+        <button type="button" id="voice" class="tool" title="Spracheingabe">◉</button>
+        <button type="submit" id="send" class="send" title="Senden">➤</button>
+      </form>
+      <div id="files" class="files"></div>
+      <small>QUBI kann Fehler machen. Prüfe wichtige Informationen.</small>
+    </div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
